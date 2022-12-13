@@ -8,9 +8,8 @@ import org.junit.jupiter.api.Test;
 public class MathOperatorImplTest {
     private MathOperator mathOperator = new MathOperatorImpl();
 
-    @SneakyThrows
     @Test
-    public void testMultiplication() {
+    public void testMultiplication() throws InvalidOperationException {
         double operand1 = 10;
         double operand2 = 4;
         String operation = "*";
@@ -18,9 +17,8 @@ public class MathOperatorImplTest {
         assertEquals(40, result);
     }
 
-    @SneakyThrows
     @Test
-    public void testDivision() {
+    public void testDivision() throws InvalidOperationException {
         double operand1 = 15;
         double operand2 = 3;
         String operation = "/";
@@ -41,9 +39,8 @@ public class MathOperatorImplTest {
         });
     }
 
-    @SneakyThrows
     @Test
-    public void testSubtraction() {
+    public void testSubtraction() throws InvalidOperationException {
         double operand1 = 20.0;
         double operand2 = 5.0;
         String operation = "-";
@@ -52,16 +49,14 @@ public class MathOperatorImplTest {
         assertEquals(15.0, result);
     }
 
-    @SneakyThrows
     @Test
-    public void testExponentiation() {
+    public void testExponentiation() throws InvalidOperationException {
         double result = mathOperator.doMath(2, 2, "**");
         assertEquals(4, result);
     }
 
-    @SneakyThrows
     @Test
-    public void testLog() {
+    public void testLog() throws InvalidOperationException {
         MathOperatorImpl mathOperator = new MathOperatorImpl();
         double operand1 = 2;
         double operand2 = 8;
@@ -73,9 +68,8 @@ public class MathOperatorImplTest {
         assertEquals(expected, result);
     }
 
-    @SneakyThrows
     @Test
-    public void testNaturalLogarithm() {
+    public void testNaturalLogarithm() throws InvalidOperationException {
         MathOperator mathOperator = new MathOperatorImpl();
         double operand1 = 9.0;
         double operand2 = 14.0;
