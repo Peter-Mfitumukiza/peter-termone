@@ -63,7 +63,7 @@ function App() {
         <div className="row input">
           <input
             type="text"
-            placeholder="Enter num2"
+            placeholder="Enter num 2"
             value={operand2}
             onChange={handleOperand2}
           />

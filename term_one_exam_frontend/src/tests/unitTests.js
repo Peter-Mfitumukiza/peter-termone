@@ -12,8 +12,8 @@ describe("App", () => {
   // Test that the component displays the initial operands and operation correctly
   it("should display the initial operands and operation correctly", () => {
     const { getByText } = render(<App />);
-    expect(getByText("...")).toBeTruthy();
-    expect(getByText("...")).toBeTruthy();
+    expect(getByText("Enter num 1 ")).toBeTruthy();
+    expect(getByText("Enter num 2 ")).toBeTruthy();
     expect(getByText("=")).toBeFalsy();
   });
 });
